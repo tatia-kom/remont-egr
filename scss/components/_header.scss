@@ -2,6 +2,172 @@
 
 .header {
   position: relative;
+  overflow-x: hidden;
 
+  &__mobile-menu {
+    display: none;
 
+    @media (max-width: $xs) {
+      display: block;
+      position: absolute;
+      top: 25px;
+      right: 15px;
+      width: 25px;
+      height: 25px;
+
+      span {
+        width: 100%;
+        height: 2px;
+        background: black;
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    background: $red;
+    color: white;
+    font-family: $font900;
+    font-size: 28px;
+    line-height: 34px;
+    padding: 81px 13px 20px;
+    border-radius: 0 0 10px 10px;
+
+    @media (max-width: $md) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $sm) {
+      width: 160px;
+      flex-shrink: 0;
+      font-size: 17px;
+    }
+
+    @media (max-width: $xs) {
+      width: 250px;
+      font-size: 28px;
+      text-align: center;
+      padding: 30px 15px 15px;
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__credits {
+    display: flex;
+    margin-top: 31px;
+
+    @media (max-width: $md) {
+      justify-content: flex-end;
+    }
+
+    @media (max-width: $sm) {
+      margin-top: 15px;
+    }
+
+    @media (max-width: $xs) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  &__address {
+    margin-right: 32px;
+    margin-top: 27px;
+
+    @media (max-width: $md) {
+      max-width: 50%;
+      text-align: right;
+      margin-top: auto;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 40%;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 230px;
+      margin-top: 15px;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__menu {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    transition: 0.3s;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      overflow: hidden;
+      height: 0;
+    }
+
+    &--opened {
+      @media (max-width: $xs) {
+        height: auto;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 4000px;
+      height: 1px;
+      background: #e2e2e2;
+      left: 100%;
+      top: 50%;
+
+      @media (max-width: $xs) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: black;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 32px;
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    &:hover {
+      color: $red;
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      @media (max-width: $xs) {
+        margin-top: 0;
+      }
+    }
+  }
 }

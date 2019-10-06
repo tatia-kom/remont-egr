@@ -1,0 +1,112 @@
+@import "layout/var";
+
+.services {
+  padding: 32px 0 100px;
+  overflow-x: hidden;
+
+  @media (max-width: $sm) {
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 15px 0;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 12px;
+
+    @media (max-width: $xs) {
+      padding-top: 0;
+    }
+  }
+
+  &__item {
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 40px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 32.4%;
+    padding: 24px;
+    flex-shrink: 0;
+
+    @media (max-width: $sm) {
+      width: 49%;
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      background-size: 50%!important;
+      background-position: right center!important;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      padding: 15px;
+    }
+
+    &:nth-child(1) {
+      background: white url('../img/serv1.png') no-repeat right 9px bottom;
+    }
+
+    &:nth-child(2) {
+      background: white url('../img/serv2.png') no-repeat right 10px bottom 40px;
+    }
+
+    &:nth-child(3) {
+      background: white url('../img/serv3.png') no-repeat right center;
+    }
+
+    &:nth-child(4) {
+      background: white url('../img/serv4.png') no-repeat right 25px bottom 44px;
+    }
+
+    &:nth-child(5) {
+      background: white url('../img/serv5.png') no-repeat right bottom;
+    }
+
+    &:nth-child(6) {
+      background: white url('../img/serv6.png') no-repeat right 15px bottom;
+    }
+  }
+
+  &__name {
+    font-family: $font900;
+    font-size: 18px;
+    line-height: 22px;
+
+    @media (max-width: $md) {
+      font-size: 14px;
+    }
+
+    @media (max-width: $xs) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__price {
+    margin-top: 12px;
+    font-family: $font700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $red;
+  }
+
+  &__button {
+    margin-top: 13px;
+    background: $red;
+    width: 149px;
+    height: 41px;
+    font-size: 14px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: #374353;
+    }
+  }
+}

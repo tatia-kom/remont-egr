@@ -1,0 +1,350 @@
+@import "layout/var";
+
+.head {
+  padding-bottom: 43px;
+  overflow-x: hidden;
+
+  @media (max-width: $xs) {
+    padding-bottom: 15px;
+  }
+
+  &__main {
+    margin-top: 67px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $sm) {
+      margin-top: 30px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 15px;
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 20%;
+
+    @media (max-width: $sm) {
+      margin-right: 10%;
+    }
+
+    @media (max-width: $xs) {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-family: $font900;
+    font-size: 36px;
+    line-height: 43px;
+    color: #161D26;
+    flex-shrink: 0;
+    margin-top: 50px;
+
+    @media (max-width: $md) {
+      font-size: 28px;
+      line-height: 33px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 22px;
+      margin-top: 15px;
+    }
+  }
+
+  &__subtitle {
+    color: $red;
+    font-family: $font900;
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 60px;
+
+    @media (max-width: $lg) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $md) {
+      margin-top: 30px;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $xs) {
+      margin: 15px 0;
+    }
+  }
+
+  // gifts
+
+  &__gifts-wrap {
+    margin-top: auto;
+    background: #161D26;
+    transform: skew(45deg);
+    position: relative;
+
+    @media (max-width: $sm) {
+      transform: skew(20deg);
+    }
+
+    @media (max-width: $xs) {
+      transform: none;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 3000px;
+        height: 100%;
+        background: #161D26;
+        top: 0;
+        left: 100%;
+        z-index: 0;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 3000px;
+      height: 100%;
+      background: #161D26;
+      top: 0;
+      right: calc(100% - 2px);
+      z-index: 0;
+    }
+  }
+
+  &__gifts {
+    padding: 16px 0;
+    transform: skew(-45deg);
+    position: relative;
+    z-index: 0;
+
+    @media (max-width: $sm) {
+      transform: skew(-20deg);
+    }
+
+    @media (max-width: $xs) {
+      transform: none;
+    }
+  }
+
+  &__gifts-title {
+    font-family: $font900;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+    max-width: 478px;
+
+    @media (max-width: $md) {
+      font-size: 18px;
+      line-height: 23px;
+      max-width: 400px;
+    }
+
+    @media (max-width: $sm) {
+      max-width: 350px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+    }
+
+    strong {
+      color: $red;
+    }
+  }
+
+  &__gifts-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+  }
+
+  &__gifts-item {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: 30%;
+    }
+    &:nth-child(2) {
+      width: 33%;
+    }
+    &:nth-child(3) {
+      width: 26%;
+    }
+
+    p {
+      color: white;
+      line-height: 19px;
+      margin-top: 12px;
+
+      @media (max-width: $md) {
+        font-size: 14px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  // form
+
+  &__form {
+    width: 24.6%;
+    flex-shrink: 0;
+    background: #161D26;
+    border-radius: 10px;
+    padding: 32px 24px 60px;
+
+    @media (max-width: $sm) {
+      width: 30%;
+      padding-bottom: 32px;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
+      padding: 15px;
+      margin-top: 15px;
+    }
+  }
+
+  &__form-title {
+    font-family: $font900;
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+    max-width: 175px;
+    margin: 0 auto 34px;
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__form-label {
+    color: white;
+    font-size: 14px;
+    display: block;
+    margin-top: 16px;
+  }
+
+  &__form-input {
+    background: #efefef;
+    color: black;
+    border-radius: 4px;
+    border: 0;
+    width: 100%;
+    height: 38px;
+    font-size: 16px;
+    padding: 0 10px;
+    margin-top: 8px;
+  }
+
+  &__form-text {
+    margin: 50px auto 0;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 14px;
+    max-width: 200px;
+
+    @media (max-width: $xs) {
+      margin-top: 15px;
+    }
+
+    a {
+      color: $red;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__form-button {
+    background: #374353;
+    width: 100%;
+    height: 50px;
+    margin-top: 37px;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    @media (max-width: $xs) {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background: $red;
+    }
+  }
+
+  // bottom
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0 0;
+
+    @media (max-width: $xs) {
+      margin-top: 15px;
+      flex-direction: column;
+    }
+  }
+
+  &__bottom-item {
+    &:nth-child(1) {
+      width: 22.5%;
+    }
+    &:nth-child(2) {
+      width: 36%;
+
+      @media (max-width: $sm) {
+        width: 40%;
+      }
+    }
+    &:nth-child(3) {
+      width: 16.2%;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%!important;
+      margin-top: 15px;
+    }
+  }
+
+  &__bottom-title {
+    font-family: $font900;
+    font-size: 24px;
+    line-height: 29px;
+    color: $red;
+    margin-bottom: 4px;
+
+    @media (max-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__bottom-text {
+    font-family: $font700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #161D26;
+  }
+}

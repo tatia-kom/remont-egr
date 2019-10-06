@@ -4,7 +4,7 @@
   src: url('../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
   url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
   url('../fonts/MuseoSansCyrl-300.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
@@ -36,6 +36,7 @@ $red: #D63222;
 
 //media
 
+$lg: 1440px;
 $md: 1199px;
 $sm: 991px;
 $xs: 767px;
