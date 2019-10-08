@@ -31,6 +31,15 @@
     width: 32.4%;
     padding: 24px;
     flex-shrink: 0;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+
+      .services__button {
+        background: #374353;
+      }
+    }
 
     @media (max-width: $sm) {
       width: 49%;

@@ -1,8 +1,36 @@
 @import "layout/var";
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
   overflow-x: hidden;
+  transition: 0.3s;
+
+  &--scrolling {
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 5000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    .header__logo {
+      padding-top: 53px;
+
+      @media (max-width: $xs) {
+        padding-top: 30px;
+      }
+    }
+    .header__credits {
+      margin-top: 10px;
+
+      @media (max-width: $xs) {
+        display: none;
+      }
+    }
+    .header__menu {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
 
   &__mobile-menu {
     display: none;
@@ -42,6 +70,7 @@
     line-height: 34px;
     padding: 81px 13px 20px;
     border-radius: 0 0 10px 10px;
+    transition: 0.3s;
 
     @media (max-width: $md) {
       font-size: 24px;
@@ -68,6 +97,7 @@
   &__credits {
     display: flex;
     margin-top: 31px;
+    transition: 0.3s;
 
     @media (max-width: $md) {
       justify-content: flex-end;

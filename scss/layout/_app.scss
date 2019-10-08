@@ -80,6 +80,18 @@ footer {
     width: 100%;
     background: url('../img/head.jpg') no-repeat center top;
     background-size: cover;
+    padding-top: 136px;
+    transition: 0.3s;
+
+    @media (max-width: $xs) {
+        padding-top: 230px;
+    }
+
+    &--menu_opened {
+        @media (max-width: $xs) {
+            padding-top: 380px;
+        }
+    }
 }
 
 .title {
