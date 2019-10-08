@@ -16,19 +16,26 @@
       padding-top: 53px;
 
       @media (max-width: $xs) {
-        padding-top: 30px;
+        padding: 0;
+        height: 0;
       }
     }
     .header__credits {
       margin-top: 10px;
-
-      @media (max-width: $xs) {
-        display: none;
-      }
     }
     .header__menu {
       margin-top: 10px;
       margin-bottom: 10px;
+    }
+    .header__address {
+      @media (max-width: $xs) {
+        display: none;
+      }
+    }
+    .contact-block__value {
+      @media (max-width: $xs) {
+        font-size: 22px;
+      }
     }
   }
 
@@ -42,6 +49,7 @@
       right: 15px;
       width: 25px;
       height: 25px;
+      z-index: 5000;
 
       span {
         width: 100%;
