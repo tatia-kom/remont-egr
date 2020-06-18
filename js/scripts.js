@@ -31,6 +31,7 @@ $(document).ready(function() {
         }
 
         const wh = $(window).height();
+
         const elOffset = $('.price').offset().top;
         const startAnimPosition = elOffset - (wh - 100);
         if  ($(window).scrollTop() > startAnimPosition) {
@@ -38,6 +39,19 @@ $(document).ready(function() {
         }
         else {
             $('.price__flex').addClass('price__flex--hidden');
+        }
+
+        const compOffset = $('.comparing').offset().top;
+        const startCompAnimPosition = compOffset - (wh - 200);
+        if  ($(window).scrollTop() > startCompAnimPosition) {
+            $('.comparing__column').each(function (index) {
+                setTimeout(function() {
+                    $('.comparing__column').eq(index).addClass('comparing__column--shown');
+                }, (index+1) * 300);
+            });
+        }
+        else {
+            $('.comparing__column').removeClass('comparing__column--shown');
         }
     });
 });
